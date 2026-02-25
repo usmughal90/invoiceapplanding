@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #3359E7;
+  --color-secondary: #0a0a0a;
+  --color-white: #ffffff;
+  --color-black: #2c2c2c;
+  --background: #ffffff;
+  --foreground: var(--color-secondary);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  position: relative
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #F9FAFB;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: #F9FAFB;
+  /* background: var(--background); */
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-heading {
+  font-weight: 700;
+  font-size: 37.54px;
+  line-height: 56.31px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* keep anchored sections visible under the sticky header */
+section[id] {
+  scroll-margin-top: 84px;
+}
+
+/* Hero angled divider */
+.landing-slant {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 150px;
+  background: #ffffff;
+  /* smoother, more elegant slope */
+  clip-path: polygon(0 72%,
+      18% 82%,
+      40% 70%,
+      62% 48%,
+      82% 28%,
+      100% 10%,
+      100% 100%,
+      0 100%);
+  filter: drop-shadow(0 -10px 18px rgba(0, 0, 0, 0.06));
+}
+
+/* Slick slider polish (screenshots) */
+.slick-wrap .slick-slide {
+  opacity: 0.85;
+  transform: scale(0.98);
+  transition: 250ms ease;
+}
+
+.slick-wrap .slick-center {
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+.slick-wrap .slick-dots li button:before {
+  font-size: 10px;
+  color: #c9c9c9;
+  opacity: 1;
+}
+
+.slick-wrap .slick-dots li.slick-active button:before {
+  color: var(--color-primary);
+}
+
+/* Slick slider polish (reviews) */
+.reviews-wrap .slick-dots {
+  position: static;
+  margin-top: 16px !important;
+}
+
+.reviews-wrap .slick-dots li button:before {
+  font-size: 10px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.reviews-wrap .slick-dots li.slick-active button:before {
+  color: #2c2c2c;
+}
+
+/* FAQ accordion animations (details/summary) */
+.faq-item {
+  transition:
+    background-color 300ms ease-out,
+    box-shadow 300ms ease-out,
+    transform 300ms ease-out;
+}
+
+.faq-item>summary {
+  transition: background-color 200ms ease-out;
+}
+
+.faq-item>summary:hover {
+  background:    #F9FAFB;;
+}
+
+.faq-item[open] {
+  background:   #F9FAFB;;
+  box-shadow: 0 14px 30px rgba(16, 24, 40, 0.08);
+  transform: translateY(-1px);
+}
+
+.faq-chevron {
+  transition: transform 300ms ease-out;
+}
+
+.faq-item[open] .faq-chevron {
+  transform: rotate(180deg);
+}
+
+/* Smooth expand/collapse for the answer panel */
+.faq-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease-out;
+}
+
+.faq-item[open] .faq-panel {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+}
+
+.faq-item[open] .faq-answer {
+  opacity: 1;
+}
+
+/* Custom scrollbar styling for FAQ section */
+.faq-scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color:  #0F172A;
+  padding-right: 10px;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+.faq-scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.faq-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+
+.faq-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #0F172A;
+  border-radius: 1rem;
+  transition: background-color 200ms ease;
+}
+
+.faq-scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color:  #0F172A;
+}
+
+
+.smartbanner {
+  top: -80px !important;
+}
+ 

@@ -1,7 +1,6 @@
-"use client";
+// "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import DownloadButton from "@/app/components/shared/DownloadButton";
 import ScrollButton from "../shared/ScrollButton";
 
@@ -14,15 +13,17 @@ export default function HeroSection({ title, subtitle }: HeroSectionProps) {
   return (
     <section
       id="home"
-      className="relative w-full pt-30 pb-20 md:pt-24 md:pb-16 lg:pt-28 lg:pb-20 min-h-screen flex items-center"
+      className="relative w-full pt-30 pb-20 md:pt-24 md:pb-16 lg:pt-28 lg:pb-20 min-h-screen flex items-center bg-[#3258E1]"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/bg header.png"
+          src="/images/slides/bg header.webp"
           alt="Background"
           fill
-          priority
+          priority={true} // Next.js ko priority dene ke liye
+          fetchPriority="high" // Browser ko foran download start karne ke liye
+          quality={0}
           className="object-cover"
         />
       </div>
@@ -47,32 +48,34 @@ export default function HeroSection({ title, subtitle }: HeroSectionProps) {
 
               <ScrollButton />
             </div>
-           <div className="mt-8 flex flex-col gap-4 items-center lg:items-start">
-  {/* Custom Signature Line - Light Grey/White Gradient with Transparency */}
-  <div className="bg-gradient-to-r from-[#f1f1f1e6] to-[#d4d4d4e6] backdrop-blur-sm px-6 py-2 rounded-lg w-fit shadow-sm">
-    <p className="text-[#3359E7] text-lg md:text-xl font-semibold">
-      Send invoices with your custom signature & stamp
-    </p>
-  </div>
+            <div className="mt-8 flex flex-col gap-4 items-center lg:items-start">
+              {/* Custom Signature Line - Light Grey/White Gradient with Transparency */}
+              <div className="bg-gradient-to-r from-[#f1f1f1e6] to-[#d4d4d4e6] backdrop-blur-sm px-6 py-2 rounded-lg w-fit shadow-sm">
+                <p className="text-[#3359E7] text-lg md:text-xl font-semibold">
+                  Send invoices with your custom signature & stamp
+                </p>
+              </div>
 
-  {/* Premium Templates Line - Darker Gradient with Transparency */}
-  <div className="flex items-center gap-2 bg-gradient-to-r from-[#ffffff33] to-[#ffffff1a] border border-white/10 px-4 py-1.5 rounded-md w-fit">
-    <span className="text-yellow-400 text-xl">★</span>
-    <p className="text-white text-lg font-semibold">
-      1000+ premium templates
-    </p>
-  </div>
-</div>
+              {/* Premium Templates Line - Darker Gradient with Transparency */}
+              <div className="flex items-center gap-2 bg-gradient-to-r from-[#ffffff33] to-[#ffffff1a] border border-white/10 px-4 py-1.5 rounded-md w-fit">
+                <span className="text-yellow-400 text-xl">★</span>
+                <p className="text-white text-lg font-semibold">
+                  1000+ premium templates
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Right Side: Mockup Image */}
           <div className="w-full  flex items-center justify-center order-1 lg:order-2 ">
             <div className="relative w-full sm:w-[70%] lg:w-full max-w-[580px] aspect-[16/16]">
               <Image
-                src="/images/slides/header mobile.png"
+                src="/images/slides/header mobile.webp"
                 alt="Mobile app mockup"
                 fill
-                priority
+                priority={true}
+                loading="eager"
+                quality={80}
                 className="object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.35)]"
               />
             </div>
@@ -91,7 +94,6 @@ export default function HeroSection({ title, subtitle }: HeroSectionProps) {
           priority
         />
       </div> */}
-
     </section>
   );
 }

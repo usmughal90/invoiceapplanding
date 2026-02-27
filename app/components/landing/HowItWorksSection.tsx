@@ -50,7 +50,8 @@ export default function HowItWorksSection({ title }: HowItWorksSectionProps) {
           {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[420px] bg-blue-600/10 rounded-full blur-[100px] -z-10"></div> */}
 
           {/* Physical Phone Frame */}
-          <div className="relative z-10 w-full max-w-[220px] h-[420px] p-[2px] bg-gray-100 dark:bg-[#1a1a1a] rounded-[3rem] border-[6px] border-gray-300 dark:border-[#333] shadow-2xl overflow-hidden">
+          <div className="relative z-10 w-full max-w-[220px]  overflow-hidden shadow-none">
+          {/* <div className="relative z-10 w-full max-w-[220px] h-[420px] p-[2px] bg-gray-100 dark:bg-[#1a1a1a] rounded-[3rem] border-[6px] border-gray-300 dark:border-[#333] shadow-2xl overflow-hidden"> */}
             {/* Notch */}
             {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-zinc-900 dark:bg-[#1a1a1a] rounded-b-2xl z-20"></div> */}
 
@@ -70,7 +71,7 @@ export default function HowItWorksSection({ title }: HowItWorksSectionProps) {
         {/* RIGHT SIDE (Timeline) */}
         <div>
           <h2 className="text-2xl sm:text-4xl font-extrabold mb-4 tracking-tighter capitalize">
-            {title || "How Does This App Work?"}
+            {title || "How Invoice Maker Estimate Works?"}
           </h2>
 
           <ul className="mt-10  ">

@@ -6,9 +6,9 @@ import Link from "next/link";
 const DownloadButton = ({ className = "" }) => {
   // Replace YOUR_APP_ID with your actual app IDs
   const androidStore =
-    "https://play.google.com/store/apps/details?id=codematics.universal.tv.remote.control";
+    "https://play.google.com/store/apps/details?id=codematics.business.invoice.billing.receipt.generator";
   const iosStore =
-    "https://apps.apple.com/sa/app/universal-tv-remote-control/id1492122256";
+    "https://apps.apple.com/us/app/invoice-maker-estimate-app/id6462679827";
 
   const [storeUrl, setStoreUrl] = useState(androidStore);
 

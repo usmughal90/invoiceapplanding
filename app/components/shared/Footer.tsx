@@ -12,7 +12,7 @@ export default function Footer() {
           target="_blank"
           className="text-white hover:text-white/80 underline"
         >
-          Invoice Maker & Receipt Maker
+          Invoice Maker Estimate App
         </a>
         . Product by{" "}
         <a

@@ -37,7 +37,7 @@ export default function ScreenshotsSlider() {
   return (
     <section id="tv-brands" className="bg-[#F9FAFB]">
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-18 ">
-        <SectionHeading title="App screens" className="text-[#3359E7]" />
+        <SectionHeading title="App screens" className="text-[#0F172A]" />
 
         <div className="mt-10">
           <div className="slick-wrap">

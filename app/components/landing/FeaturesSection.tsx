@@ -11,7 +11,7 @@ export default function FeaturesSection({ title, subtitle }: FeaturesSectionProp
     <section id="features" className="bg-[#F9FAFB] min-h-screen">
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-18">
         <SectionHeading
-          title={title || "Features"}
+          title={title || "Features Invoice Maker"}
           className="text-[#0F172A] "
         />
 
@@ -38,7 +38,7 @@ export default function FeaturesSection({ title, subtitle }: FeaturesSectionProp
                   <p className="mt-2 text-sm leading-6 text-[#475569]">
                     {f.description}
                   </p>
-                </div>
+                </div>   
               </div>
             </div>
           ))}

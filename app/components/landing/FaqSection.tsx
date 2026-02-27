@@ -41,10 +41,10 @@ export default function FaqSection() {
             ))}
           </div>
 
-          <p className="mt-4 text-center text-xs text-zinc-500">
+          {/* <p className="mt-4 text-center text-xs text-zinc-500">
             Still have questions? Scroll down to download the app and try it on
             your TV.
-          </p>
+          </p> */}
         </div>
       </div>
     </section>
